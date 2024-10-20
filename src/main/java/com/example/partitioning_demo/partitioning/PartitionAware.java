@@ -1,4 +1,4 @@
-package com.example.partitioning_demo;
+package com.example.partitioning_demo.partitioning;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;

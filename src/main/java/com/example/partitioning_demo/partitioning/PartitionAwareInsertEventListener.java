@@ -1,5 +1,6 @@
-package com.example.partitioning_demo;
+package com.example.partitioning_demo.partitioning;
 
+import com.example.partitioning_demo.partitioning.PartitionAware;
 import org.hibernate.Filter;
 import org.hibernate.event.spi.PreInsertEvent;
 import org.hibernate.event.spi.PreInsertEventListener;

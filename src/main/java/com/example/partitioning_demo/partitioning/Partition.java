@@ -1,4 +1,4 @@
-package com.example.partitioning_demo;
+package com.example.partitioning_demo.partitioning;
 
 public enum Partition {
     ASIA("Asia"),
