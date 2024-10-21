@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
 @Service
@@ -48,23 +49,23 @@ public class PostService {
 //             vlad.setPartition(Partition.EUROPE);
 
          entityManager.persist(user);
-         entityManager.flush();
+//         entityManager.flush();
 
 //         UserContext.logIn(vlad);
 
-         List<Post> posts = LongStream.rangeClosed(1, 2)
-                 .mapToObj(postId -> {
-                     final Post post1 = new Post();
-                     post1.setUser(user);
-                     post1.setTitle(String.format(
-                             "High-Performance Java Persistence - Part %d",
-                             postId
-                     ));
-                     return post1;
-                 }).toList();
-        List<Post> mutablePosts = new ArrayList<>(posts);
-        entityManager.persist(mutablePosts);
-        entityManager.flush();
+//         List<Post> posts = LongStream.rangeClosed(1, 2)
+//                 .mapToObj(postId -> {
+//                     final Post post1 = new Post();
+//                     post1.setUser(user);
+//                     post1.setTitle(String.format(
+//                             "High-Performance Java Persistence - Part %d",
+//                             postId
+//                     ));
+//                     return post1;
+//                 }).collect(Collectors.toList());
+//        List<Post> mutablePosts = new ArrayList<>(posts);
+//        entityManager.persist(mutablePosts);
+//        entityManager.flush();
     }
 
 }
