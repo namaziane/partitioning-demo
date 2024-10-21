@@ -1,7 +1,6 @@
 package com.example.partitioning_demo.configuration;
 
-import com.example.partitioning_demo.configuration.PartitionAwareEventListenerIntegrator;
-import com.example.partitioning_demo.partitioning.PartitionAware;
+import com.example.partitioning_demo.partitioning.entities.PartitionAware;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import org.hibernate.Session;

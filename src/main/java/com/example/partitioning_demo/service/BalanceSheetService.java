@@ -1,6 +1,6 @@
 package com.example.partitioning_demo.service;
 
-import com.example.partitioning_demo.model.BalanceSheet;
+import com.example.partitioning_demo.partitionedentity.BalanceSheet;
 import com.example.partitioning_demo.repository.BalanceSheetRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

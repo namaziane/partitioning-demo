@@ -1,7 +1,7 @@
 package com.example.partitioning_demo;
 
-import com.example.partitioning_demo.model.Post;
-import com.example.partitioning_demo.model.User;
+import com.example.partitioning_demo.partitionedentity.Post;
+import com.example.partitioning_demo.partitionedentity.User;
 import com.example.partitioning_demo.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -29,12 +29,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- PostgreSQL driver -->
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>42.5.0</version>
-		</dependency>
 
 		<!-- Lombok (optionnel) -->
 		<dependency>
@@ -63,19 +57,38 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>10.10.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>10.10.0</version>
+				<configuration>
+					<url>jdbc:postgresql://localhost:5432/todo_test</url>
+					<user>postgres</user>
+					<password>nafia</password>
+					<schemas>
+						<schema>partit</schema>
+					</schemas>
+					<locations>
+						<location>classpath:db/migration</location>
+					</locations>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

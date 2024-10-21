@@ -1,6 +1,6 @@
 package com.example.partitioning_demo.repository;
 
-import com.example.partitioning_demo.model.BalanceSheet;
+import com.example.partitioning_demo.partitionedentity.BalanceSheet;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

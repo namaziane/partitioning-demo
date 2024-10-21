@@ -1,6 +1,6 @@
-package com.example.partitioning_demo.model;
+package com.example.partitioning_demo.partitionedentity;
 
-import com.example.partitioning_demo.partitioning.PartitionAware;
+import com.example.partitioning_demo.partitioning.entities.PartitionAware;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import org.hibernate.annotations.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "posts", schema = "partitioningg")
+@Table(name = "posts")//, schema = "partitioningg")
 @FilterDef(name = "partitionFilter", parameters = @ParamDef(name = "partitionKey", type = String.class))
 @Filters({
     @Filter(name = "partitionFilter", condition = "partition_key = :partitionKey")

@@ -1,5 +1,6 @@
-package com.example.partitioning_demo.partitioning;
+package com.example.partitioning_demo.partitioning.integ;
 
+import com.example.partitioning_demo.partitioning.entities.PartitionKey;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 

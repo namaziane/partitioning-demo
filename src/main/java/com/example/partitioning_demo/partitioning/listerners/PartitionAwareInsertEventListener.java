@@ -1,6 +1,6 @@
-package com.example.partitioning_demo.partitioning;
+package com.example.partitioning_demo.partitioning.listerners;
 
-import org.hibernate.Filter;
+import com.example.partitioning_demo.partitioning.entities.PartitionAware;
 import org.hibernate.event.spi.PreInsertEvent;
 import org.hibernate.event.spi.PreInsertEventListener;
 import org.hibernate.internal.FilterImpl;
@@ -28,6 +28,7 @@ public class PartitionAwareInsertEventListener implements PreInsertEventListener
                                     .getParameter(PartitionAware.PARTITION_KEY)
                     );
                     event.getSession().persist(entity);
+                    return true;
                 }
             }
         }

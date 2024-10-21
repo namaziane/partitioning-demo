@@ -1,4 +1,4 @@
-package com.example.partitioning_demo.partitioning;
+package com.example.partitioning_demo.partitioning.entities;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

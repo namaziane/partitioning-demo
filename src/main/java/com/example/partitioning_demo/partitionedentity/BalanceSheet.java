@@ -1,4 +1,4 @@
-package com.example.partitioning_demo.model;
+package com.example.partitioning_demo.partitionedentity;
 
 import jakarta.persistence.*;
 

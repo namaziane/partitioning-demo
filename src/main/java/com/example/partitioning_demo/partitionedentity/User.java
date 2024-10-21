@@ -1,6 +1,6 @@
-package com.example.partitioning_demo.model;
+package com.example.partitioning_demo.partitionedentity;
 
-import com.example.partitioning_demo.partitioning.PartitionAware;
+import com.example.partitioning_demo.partitioning.entities.PartitionAware;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "users", schema = "partitioningg")
+@Table(name = "users")//, schema = "partitioningg")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
